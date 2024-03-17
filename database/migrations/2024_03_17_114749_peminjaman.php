@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('peminjaman', function (Blueprint $table){
             $table->id('id')->primary();
+            $table->foreignUuid('barang_id')->constrained()->cascadeOnDelete();
+            $table->foreignUuid('laporan_id')->constrained()->cascadeOnDelete();
             $table->string('nama_peminjaman');
             $table->string('keterangan_peminjaman');
             $table->timestamp('waktu_peminjaman');

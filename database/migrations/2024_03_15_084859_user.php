@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('user', function (Blueprint $table){
             $table->id('id')->primary();
+            $table->foreignUuid('barang_id')->constrained()->cascadeOnDelete();
+            $table->foreignUuid('peminjaman_id')->constrained()->cascadeOnDelete();
             $table->string('nama_User');
             $table->string('no_hp');
             $table->dateTime('tgl_buat');

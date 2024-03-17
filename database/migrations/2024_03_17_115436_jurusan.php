@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('jurusan', function (Blueprint $table){
             $table->id('id')->primary();
+            $table->foreignUuid('ruangan_id')->constrained()->cascadeOnDelete();
             $table->string('nama_jurusan');
             $table->string('deskripsi_jurusan');
             $table->integer('kode_jurusan');

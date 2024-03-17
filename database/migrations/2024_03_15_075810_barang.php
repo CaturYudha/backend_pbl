@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function(Blueprint $table){
+        Schema::create('barang', function(Blueprint $table){
             $table->id('id')->primary;
+            $table->foreignUuid('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignUuid('peminjaman_id')->constrained()->cascadeOnDelete();
+            $table->foreignUuid('ruangan_id')->constrained()->cascadeOnDelete();
             $table->string('nama_barang');
             $table->string('merek_barang');
             $table->integer('kode_barang');
