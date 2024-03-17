@@ -14,14 +14,18 @@ return new class extends Migration
         Schema::create('user', function (Blueprint $table){
             $table->id('id')->primary();
             $table->string('nama_User');
+            $table->string('no_hp');
+            $table->dateTime('tgl_buat');
+            $table->datetime('tgl_edit');
+            $table->string('ttd');
             $table->string('username');
             $table->string('password_user');
-            $table->string('user_admin');
-            $table->string('user_kepsek');
+            $table->string('user_Admin');
+            $table->string('user_Kepsek');
             $table->string('user_wakasarpras');
             $table->string('user_kepro_keahlian');
             $table->string('user_guru');
-            $table->string('user_murid');
+            $table->string('user_Murid');
         });
     }
 

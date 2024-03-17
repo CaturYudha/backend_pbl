@@ -24,7 +24,7 @@ return new class extends Migration
             $table->enum('Jenis_Barang', ['sekali_Pakai', 'tidak_Sekali_Pakai']);
             $table->string('barcode_barang');
             $table->integer('harga_barang');
-            $table->timestamp();
+            $table->timestamp('');
         });
     }
 
