@@ -22,12 +22,7 @@ return new class extends Migration
             $table->string('ttd');
             $table->string('username');
             $table->string('password_user');
-            $table->string('user_Admin');
-            $table->string('user_Kepsek');
-            $table->string('user_wakasarpras');
-            $table->string('user_kepro_keahlian');
-            $table->string('user_guru');
-            $table->string('user_Murid');
+            $table->string('role', ['admin', 'kepsek', 'wakasarpras', 'kepro_keahlian', 'guru', 'murid']);
         });
     }
 
